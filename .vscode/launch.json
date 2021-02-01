@@ -1,0 +1,17 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Rake",
+            "type": "Ruby",
+            "request": "launch",
+            "cwd": "${workspaceRoot}",
+            "program": "${workspaceRoot}/bin/rake",
+            "useBundler": true,
+            "args": ["-f ${workspaceRoot}Rakefile redmine:email:receive_pop3 host=10.240.1.7 username=Redmine password=Redmine-001 project=helpdesk tracker=Поддержка allow_override=tracker,priority,subject delete_unprocessed=1 unknown_user=accept no_permission_check=1"]
+        }        
+    ]
+}
